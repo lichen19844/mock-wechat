@@ -1,0 +1,1 @@
+<view><view class="flex"><view class="flex-1 bg-danger" style="height:200rpx;">1</view><view class="flex-1 bg-success" style="height:200rpx;">1</view></view></view>
