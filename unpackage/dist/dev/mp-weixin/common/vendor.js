@@ -8531,7 +8531,7 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/tabbar/index/index": { "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/tabbar/mail/mail": { "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/tabbar/find/find": { "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/tabbar/my/my": { "usingComponents": {}, "usingAutoImportComponents": {} } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/tabbar/index/index": {}, "pages/tabbar/mail/mail": {}, "pages/tabbar/find/find": {}, "pages/tabbar/my/my": {} }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
 
 /***/ }),
 /* 8 */

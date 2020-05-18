@@ -7,7 +7,8 @@ export default {
 		const domModule = weex.requireModule('dom');
 		domModule.addRule('fontFace', {
 			fontFamily: 'iconfont',
-			src: "url('https://at.alicdn.com/t/font_1365296_vumpzwvr0z.ttf')"
+			// src: "url('https://at.alicdn.com/t/font_1365296_vumpzwvr0z.ttf')"
+			src: "url('https://at.alicdn.com/t/font_1365296_2ijcbdrmsg.ttf')"
 		});
 		// #endif
 	},
