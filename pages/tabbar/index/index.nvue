@@ -4,44 +4,76 @@
 			<view class="flex-1 main-bg-color rounded-circle border" style="height: 200rpx;"></view>
 			<view class="flex-1 rounded-circle border" style="height: 200rpx;"></view>
 		</view> -->
-	<!-- 	<view class="pt-5">
+		<!-- 	<view class="pt-5">
 			<text class="iconfont font-lg">&#xe6dc;</text>
 		</view> -->
 		<!-- 导航栏 -->
 		<freeNavBar :title="true" :fixed="false">
-			<template slot="title">仿微信(12)</template>
+			<template slot="title">
+				仿微信(12)
+			</template>
 		</freeNavBar>
-		
+
 		<!-- 列表 -->
-		<view class="flex align-center">
-			<view class="flex align-center justify-center" style="width:145rpx;">
-				<image src="/static/images/userpic.png" mode="widthFix" class="rounded" style="width:92rpx; height:92rpx"></image>
-			</view>
-			<view class="flex flex-column border-bottom flex-1 py-3 pr-3 border-light-secondary">
-				<view class="flex align-center justify-between mb-1">
-					<text class="font-md">昵称</text>
-					<text class="font-sm text-light-muted">11:59</text>
+		<block v-for="(item, index) of list" :key="index">
+			<view class="flex align-stretch">
+				<view class="flex align-center justify-center position-relative" style="width:145rpx;">
+					<!-- <image :src="item.avator" mode="widthFix" class="rounded" style="width:92rpx; height:92rpx"></image> -->
+					<free-avator :src="item.avator" :size="92"></free-avator>
+					<text class="bg-danger text-white rounded-circle font-sm position-absolute" 
+						style="padding-left: 14rpx;padding-right: 14rpx;padding-bottom: 6rpx;padding-top: 6rpx; right: 15rpx; top: 7rpx">1</text>
 				</view>
-				<text class="font text-ellipsis text-light-muted">content</text>
+				<view class="flex flex-column border-bottom flex-1 py-3 pr-3 border-light-secondary">
+					<view class="flex align-center justify-between mb-1">
+						<text class="font-md">{{ list.nickname }}</text>
+						<text class="font-sm text-light-muted">{{ item.update_time | formatTime }}</text>
+					</view>
+					<text class="font text-ellipsis text-light-muted">{{ item.data }}</text>
+				</view>
 			</view>
-		</view>
+		</block>
 	</view>
 </template>
 
 <script>
 import freeNavBar from '@/components/free-ui/free-nav-bar.vue';
+import $Time from '@/common/free-lib/time.js';
+import freeAvator from '@/components/free-ui/free-avator.vue';
 export default {
 	components: {
-		freeNavBar
+		freeNavBar,
+		freeAvator
 	},
 	data() {
 		return {
-
+			list: [
+				{
+					avator: '/static/images/userpic.png',
+					nickname: 'summer',
+					update_time: 1590474002,
+					data: '中午好哈~'
+				},
+				{
+					avator: '/static/images/userpic.png',
+					nickname: 'summer',
+					update_time: 1590474500,
+					data: '中午好哈~'
+				},
+				{
+					avator: '/static/images/userpic.png',
+					nickname: 'summer',
+					update_time: 1590474002,
+					data: '中午好哈~'
+				}
+			]
 		};
 	},
-	onLoad() {
-
+	filters: {
+		formatTime(value) {
+			return $Time.gettime(value);
+		}
 	},
+	onLoad() {},
 	methods: {}
 };
 </script>
