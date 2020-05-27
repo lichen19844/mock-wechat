@@ -8,41 +8,27 @@
 			<text class="iconfont font-lg">&#xe6dc;</text>
 		</view> -->
 		<!-- 导航栏 -->
-		<freeNavBar :title="true" :fixed="false">
-			<template slot="title">
+		<freeNavBar :title="true" :fixed="false" mock-name="仿微信(12)">
+			<!-- <template slot="title">
 				仿微信(12)
-			</template>
+			</template> -->
 		</freeNavBar>
 
 		<!-- 列表 -->
 		<block v-for="(item, index) of list" :key="index">
-			<view class="flex align-stretch">
-				<view class="flex align-center justify-center position-relative" style="width:145rpx;">
-					<!-- <image :src="item.avator" mode="widthFix" class="rounded" style="width:92rpx; height:92rpx"></image> -->
-					<free-avator :src="item.avator" :size="92"></free-avator>
-					<text class="bg-danger text-white rounded-circle font-sm position-absolute" 
-						style="padding-left: 14rpx;padding-right: 14rpx;padding-bottom: 6rpx;padding-top: 6rpx; right: 15rpx; top: 7rpx">1</text>
-				</view>
-				<view class="flex flex-column border-bottom flex-1 py-3 pr-3 border-light-secondary">
-					<view class="flex align-center justify-between mb-1">
-						<text class="font-md">{{ list.nickname }}</text>
-						<text class="font-sm text-light-muted">{{ item.update_time | formatTime }}</text>
-					</view>
-					<text class="font text-ellipsis text-light-muted">{{ item.data }}</text>
-				</view>
-			</view>
+			<freeMediaList :item="item" :index="index"></freeMediaList>
 		</block>
 	</view>
 </template>
 
 <script>
 import freeNavBar from '@/components/free-ui/free-nav-bar.vue';
-import $Time from '@/common/free-lib/time.js';
-import freeAvator from '@/components/free-ui/free-avator.vue';
+import freeMediaList from '@/components/free-ui/free-media-list.vue';
+
 export default {
 	components: {
 		freeNavBar,
-		freeAvator
+		freeMediaList
 	},
 	data() {
 		return {
@@ -51,19 +37,22 @@ export default {
 					avator: '/static/images/userpic.png',
 					nickname: 'summer',
 					update_time: 1590474002,
-					data: '中午好哈~'
+					data: '中午好哈~',
+					noreadnum: 1
 				},
 				{
 					avator: '/static/images/userpic.png',
 					nickname: 'summer',
-					update_time: 1590474500,
-					data: '中午好哈~'
+					update_time: 1590582238,
+					data: '中午好哈~',
+					noreadnum: 0
 				},
 				{
 					avator: '/static/images/userpic.png',
 					nickname: 'summer',
-					update_time: 1590474002,
-					data: '中午好哈~'
+					update_time: 1590582259,
+					data: '中午好哈~',
+					noreadnum: 0
 				}
 			]
 		};

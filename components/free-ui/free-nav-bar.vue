@@ -4,14 +4,15 @@
 			<!-- 状态栏 -->
 			<view :style="statusBHeight"></view>
 			<!-- 导航 -->
-			<view class="w-100 flex align-center justify-between" style="height:90rpx">
+			<view class="w-100 flex flex-row align-center justify-between" style="height:90rpx">
 				<!-- 左边 -->
 				<view class="flex align-center">
 					<!-- 标题 -->
-					<text v-if="title" class="font-md ml-3"><slot name="title"></slot></text>
+					<!-- <text v-if="title" class="font-md ml-3"><slot name="title"></slot></text> -->
+					<text v-if="title" class="font-md ml-3">{{mockName}}</text>
 				</view>
 				<!-- 右边 -->
-				<view class="flex align-center">
+				<view class="flex flex-row align-center">
 					<view class="flex align-center justify-center" hover-class="bg-hover-light" style="height: 90rpx; width:90rpx;" @click="$emit('click')">
 						<text class="iconfont font-md">&#xe6e3;</text>
 					</view>
@@ -40,6 +41,10 @@ export default {
 		fixed: {
 			type: Boolean,
 			default: true
+		},
+		mockName: {
+			type: String,
+			default: ''
 		}
 	},
 	components: {
