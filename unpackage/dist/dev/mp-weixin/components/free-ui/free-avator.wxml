@@ -1,0 +1,1 @@
+<view class="flex align-center justify-center" style="width:145rpx;"><image class="{{[type]}}" style="{{(getStyle)}}" src="{{src}}" mode="widthFix"></image></view>

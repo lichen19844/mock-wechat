@@ -1,0 +1,1 @@
+<view><free-nav-bar vue-id="f8c7e56e-1" title="{{true}}" fixed="{{false}}" mock-name="仿微信(12)" bind:__l="__l"></free-nav-bar><block wx:for="{{list}}" wx:for-item="item" wx:for-index="index" wx:key="index"><block><free-media-list vue-id="{{'f8c7e56e-2-'+index}}" item="{{item}}" index="{{index}}" bind:__l="__l"></free-media-list></block></block></view>
