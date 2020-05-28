@@ -112,7 +112,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var freeIconButton = function freeIconButton() {__webpack_require__.e(/*! require.ensure | components/free-ui/free-icon-button */ "components/free-ui/free-icon-button").then((function () {return resolve(__webpack_require__(/*! ./free-icon-button.vue */ 55));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var freeIconButton = function freeIconButton() {__webpack_require__.e(/*! require.ensure | components/free-ui/free-icon-button */ "components/free-ui/free-icon-button").then((function () {return resolve(__webpack_require__(/*! ./free-icon-button.vue */ 60));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -158,7 +158,11 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
     mockName: {
       type: String,
-      default: '' } },
+      default: '' },
+
+    noreadnum: {
+      type: Number,
+      default: 0 } },
 
 
   components: {
@@ -177,13 +181,21 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
   },
-  methods: {},
+  methods: {
+    openExtend: function openExtend() {
+      this.$emit('openExtend');
+    } },
+
   computed: {
     statusBHeight: function statusBHeight() {
       return "height: ".concat(this.statusBarHeight, "px");
     },
     fixedStyle: function fixedStyle() {
       return "height: ".concat(this.navBarHeight, "px");
+    },
+    getTitle: function getTitle() {
+      var noreadnum = this.noreadnum > 0 ? '(' + this.noreadnum + ')' : '';
+      return this.mockName + noreadnum;
     } } };exports.default = _default;
 
 /***/ })

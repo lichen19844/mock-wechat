@@ -135,7 +135,13 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var freeNavBar = function freeNavBar() {__webpack_require__.e(/*! require.ensure | components/free-ui/free-nav-bar */ "components/free-ui/free-nav-bar").then((function () {return resolve(__webpack_require__(/*! @/components/free-ui/free-nav-bar.vue */ 43));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var freeMediaList = function freeMediaList() {Promise.all(/*! require.ensure | components/free-ui/free-media-list */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/free-ui/free-media-list")]).then((function () {return resolve(__webpack_require__(/*! @/components/free-ui/free-media-list.vue */ 48));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var freeNavBar = function freeNavBar() {__webpack_require__.e(/*! require.ensure | components/free-ui/free-nav-bar */ "components/free-ui/free-nav-bar").then((function () {return resolve(__webpack_require__(/*! @/components/free-ui/free-nav-bar.vue */ 43));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var freeMediaList = function freeMediaList() {Promise.all(/*! require.ensure | components/free-ui/free-media-list */[__webpack_require__.e("common/vendor"), __webpack_require__.e("components/free-ui/free-media-list")]).then((function () {return resolve(__webpack_require__(/*! @/components/free-ui/free-media-list.vue */ 48));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var freePopup = function freePopup() {__webpack_require__.e(/*! require.ensure | components/free-ui/free-popup */ "components/free-ui/free-popup").then((function () {return resolve(__webpack_require__(/*! @/components/free-ui/free-popup.vue */ 55));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
+
+
+
+
 
 
 
@@ -194,7 +200,8 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 {
   components: {
     freeNavBar: freeNavBar,
-    freeMediaList: freeMediaList },
+    freeMediaList: freeMediaList,
+    freePopup: freePopup },
 
   data: function data() {
     return {
@@ -229,7 +236,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     } },
 
   onLoad: function onLoad() {},
-  methods: {} };exports.default = _default;
+  methods: {
+    openExtend: function openExtend() {
+      this.$refs.extend.show();
+    } } };exports.default = _default;
 
 /***/ }),
 /* 17 */
