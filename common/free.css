@@ -390,6 +390,9 @@
 .right-0 { right: 0; }
 .bottom-0 { bottom: 0; }
 
+.top-100 { top: 100rpx; }
+.left-100 { left: 100rpx }
+
 /* 阴影 */
 /* #ifndef APP-PLUS-NVUE */
 .shadow { box-shadow: 0 2upx 12upx rgba(0, 0, 0, 0.15);}
