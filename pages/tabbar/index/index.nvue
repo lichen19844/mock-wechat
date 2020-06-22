@@ -16,7 +16,9 @@
 
 		<!-- 列表 -->
 		<block v-for="(item, index) of list" :key="index">
-			<freeMediaList :item="item" :index="index"></freeMediaList>
+			<freeMediaList :item="item" :index="index"
+				@long='long'>
+			</freeMediaList>
 		</block>
 		
 		<!-- 弹出层 -->
@@ -71,6 +73,9 @@ export default {
 	},
 	onLoad() {},
 	methods: {
+		long ({x, y}) {
+			this.$refs.extend.show(x, y)
+		},
 		openExtend () {
 			this.$refs.extend.show(200, 100)
 		}
